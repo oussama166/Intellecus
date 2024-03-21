@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400;1,500&display=swap');
+
+
+@font-face {
+  font-family: reCaptcha;
+  src: url('../lib/MType/Mom«t___.ttf');
+}
+
+:root {
+  --frist: hsl(353, 76%, 62%);
+  --second: hsl(120, 1%, 85%);
+  --thirth: hsl(204, 59%, 64%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
+.principal {
+  width: 1200px;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  position: relative;
+  box-shadow: 0px 11px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.left {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.left>video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(2px);
+  z-index: 9000;
+}
+
+.left::before {
+  content: "INTELLECUS";
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  color: white;
+  font-weight: bolder;
+  font-family: 'Segoe UI', sans-serif;
+  z-index: 1;
+}
+
+.right {
+  width: 70%;
+  display: flex;
+  /* justify-content: safe; */
+  flex-direction: column;
+  text-align: center;
+}
+
+.back {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+}
+
+.back>.left-side {
+  width: 20%;
+  background-color: var(--thirth);
+}
+
+.back>.right-side {
+  width: 80%;
+  background-color: hsl(206, 26%, 95%);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.body>form {
+  width: 60%;
+}
+
+.body>form input[type="email"],
+.body>form input[type="text"],
+.body>form input[type="password"],
+.body>form .rcpst {
+  margin: 20px 10px;
+  width: 100%;
+  height: 37px;
+  border: none;
+  border-bottom: 3px solid hsl(0, 0%, 67%);
+  font-size: 15px;
+}
+
+.body>form>.section-rcpt {
+  display: flex;
+  flex-direction: row;
+}
+
+.body>form>.section-rcpt>input:disabled {
+  font-family: 'reCaptcha';
+  text-align: center;
+  color: black;
+  letter-spacing: 1rem;
+  font-size: 1.5625rem;
+  border-bottom-color: black;
+  pointer-events: none;
+}
+
+.body>form>input[data-title="Rcaptcha"]:placeholder-shown {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.body>form input {
+  font-size: 15px;
+  font-weight: 500;
+  outline: none;
+  margin-inline: 20%;
+  transition: 0.45s ease-in-out;
+}
+
+.body>form input:focus {
+  transform: scale(1.1);
+  text-align: center;
+  transition: 0.45s ease-in-out;
+}
+
+.body>* {
+  padding: 10px 0;
+}
+
+.body>h3 {
+  padding: 0;
+  font-size: 1rem;
+  word-spacing: .2rem;
+  color: hsl(0, 0%, 67%);
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.right>.upper>.ligne {
+  display: flex;
+  margin: 20px 40px;
+  justify-content: flex-end;
+}
+
+.right>.upper>.ligne>hr {
+  transform: translateY(244%);
+  width: 67%;
+  height: 1px;
+  position: absolute;
+  top: 6%;
+  color: var(--frist);
+}
+
+.right>.upper>.ligne>img {
+  position: relative;
+}
+
+.body>form>input[type="submit"] {
+  padding: 10px 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: hsl(237, 73%, 57%);
+  color: whitesmoke;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.body>form .rcpst:focus {
+  text-align: center;
+  letter-spacing: 1rem;
+}
+
+.body>form .rcpst:placeholder-shown {
+  text-align: center;
+}
+
+.body>form .rcpst {
+  text-align: center;
+  letter-spacing: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  border-bottom-color: red;
+  letter-spacing: 1rem;
+  transform: scale(1.1);
+}

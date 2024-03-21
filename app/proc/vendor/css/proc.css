@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400&family=Barlow:wght@300;400&family=Bellefair&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+:root {
+  --primary: hsl(232, 39%, 28%);
+  --secondary: hsl(240, 10%, 94%);
+  --alert: hsl(223, 25%, 40%);
+  --color-primary-prog: hsl(43, 100%, 50%);
+  --color-secondary-prog: hsl(47, 88%, 59%);
+  --color-thirth-prog: hsl(48, 100%, 69%);
+  --color-btn-submit: hsl(223, 42%, 36%);
+  --border-card: #C4C4C4;
+  --font-size: 14px;
+  --font-fammily: 'Poppins', sans-serif;
+  --letter-spacing-5: 0.05 rem;
+  --letter-spacing-6: 0.065 rem;
+  --w-1: 600;
+  --w-2: 400;
+  --w-3: 300;
+  --w-4: 200;
+  --w-5: 100;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: var(--font-size);
+  font-family: var(--font-fammily);
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.42em;
+}
+
+input[type="checkbox"] {
+  pointer-events: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type="text"]:active,
+input[type="text"]:focus {
+  outline: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.principale {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 
+                                                -------------------------------------------------------
+                                                --------------------Header-----------------------------
+                                                ------------------------------------------------------- 
+                                                */
+.header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 10px;
+  box-shadow: 0px -5px 20px hsl(0, 0%, 0%, .3);
+}
+
+.header>*:first-child {
+  margin-inline-start: 15px;
+}
+
+.header>*:last-child {
+  margin-inline-end: 20px;
+}
+
+.header>.left-head {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.header>.left-head>* {
+  line-height: 2;
+}
+
+.header>.left-head>p:first-child {
+  color: var(--color-primary-prog);
+  font-weight: 500;
+}
+
+.header>.left-head>p:last-child {
+  text-indent: 20px;
+  color: var(--primary);
+  font-weight: bold;
+  position: relative;
+}
+
+.header>.left-head>p:last-child::before {
+  content: "";
+  width: 3%;
+  height: 1px;
+  bottom: 0;
+  left: 30px;
+  position: absolute;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 50%;
+  opacity: .5;
+}
+
+.header>.right-head>button,
+.header>.right-head button[type="submit"]{
+  width: 171px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: var(--color-thirth-prog);
+  font-weight: bold;
+  color: black;
+  border: none;
+  letter-spacing: var(--letter-spacing-5);
+  cursor:pointer ;
+}
+
+
+/* 
+                                      -------------------------------------------------------
+                                      --------------------Body-------------------------------
+                                      ------------------------------------------------------- 
+*/
+.body {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+}
+
+.right-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-body>:first-child {
+  border: none;
+  border-radius: 30px;
+  background-color: var(--color-primary-prog);
+  width: 555px;
+  height: 20px;
+}
+
+.right-body>:first-child::-webkit-progress-bar,
+.right-body>:first-child::-moz-progress-bar {
+
+  background: repeating-linear-gradient(-45deg,
+      #f6ba52,
+      #f6ba52 10px,
+      #ffd180 10px,
+      #ffd180 20px);
+  background-repeat: repeat-x;
+  border-radius: 30px;
+  background-size: 400% 100%;
+  -webkit-animation: AnimationName 15s linear infinite;
+  -moz-animation: AnimationName 15s linear infinite;
+  animation: AnimationName 15s linear infinite;
+  border-radius: 30px;
+  outline: none;
+}
+
+.right-body>:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*-----------------------------------------
+-----------------Footer--------------------
+/*-----------------------------------------*/
+.footer {
+  height: calc(100vh - 25vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.footer>.uper-footer {
+  display: flex;
+  margin-inline-start: 100px;
+  width: 100%;
+}
+
+.footer>.uper-footer>.card {
+  width: 350px;
+  height: 250px;
+  aspect-ratio: .8;
+  padding: 62px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-inline: 20px;
+  position: relative;
+  text-align: center;
+  border: 3px solid var(--border-card);
+  box-shadow: 13px 7px 15px 0px hsla(0, 0%, 0%, 0.5);
+  border-radius: 30px;
+}
+
+.footer>.uper-footer>.check {
+  border: 4px solid var(--color-secondary-prog);
+  scale: 1.1;
+}
+
+.footer>.uper-footer>.disabled {
+  border: 2px solid gainsboro;
+}
+
+.footer>.uper-footer>.disabled>.footer>.uper-footer>.check>.body-card>svg>path {
+  fill: var(--color-primary-prog);
+}
+
+.footer>.uper-footer>.card>.body-card>span {
+  font-size: 15px;
+  font-weight: var(--w-1);
+  letter-spacing: 1mm;
+  color: var(--primary);
+}
+
+.footer > .uper-footer > .card a {
+  font-size: 15px;
+  font-weight: var(--w-1);
+  letter-spacing: 1mm;
+  color: var(--primary);
+}
+.footer > .uper-footer > .check > .body-card > a {
+  font-size: 18px;
+}
+.footer>.uper-footer>.check>.body-card>span {
+  font-size: 18px;
+}
+
+.footer>.uper-footer>.card>.uper-card {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+}
+
+.footer>.uper-footer>.card>.uper-card>input[type="checkbox"] {
+  width: 35px;
+  height: 35px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  border: 4px solid gainsboro;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer>.uper-footer>.card>.uper-card>input[type="checkbox"]::after {
+  font-family: "font Awesome 5 free";
+  font-weight: 900;
+  content: "\f00c";
+  font-size: 25px;
+  color: white;
+  display: none;
+}
+
+.footer>.uper-footer>.card>.uper-card>input[type="checkbox"]:hover {
+  background-color: whitesmoke;
+}
+
+.footer>.uper-footer>.card>.uper-card>input[type="checkbox"]:checked {
+  border-color: var(--color-primary-prog);
+  background-color: var(--color-primary-prog);
+
+}
+
+.footer>.uper-footer>.card>.uper-card>input[type="checkbox"]:checked::after {
+  display: block;
+}
+
+.footer>.uper-footer>.card>.uper-card>input[type="checkbox"]:disabled {
+  background-color: gainsboro;
+  color: gainsboro;
+}
+
+.footer>.down-footer {
+  text-align: center;
+}
+
+.footer>.down-footer>button {
+  width: 292px;
+  background-color: var(--color-btn-submit);
+  color: white;
+  font-weight: var(--w-1);
+  padding-block: 10px;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.footer>.down-footer>button>span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.footer>.down-footer>button>span::after {
+  content: '\2192';
+  position: absolute;
+  color: white;
+  opacity: 0;
+  top: -10px;
+  right: -111%;
+  transition: 0.5s;
+  font-size: 25px;
+  font-weight: 900;
+  font-family: 'Tahoma', Geneva, Verdana, sans-serif;
+  z-index: 1000;
+}
+
+.footer>.down-footer>button:hover span {
+  padding-right: 25px;
+}
+
+.footer>.down-footer>button:hover span::after {
+  opacity: 1;
+  right: -90px;
+}
+
+/*-----------------------------------------
+-----------------Inscription---------------
+-----------------------------------------*/
+.inscription {
+  position: absolute;
+  outline: none;
+  height: 100vh;
+  width: 100%;
+  background-color: hsla(223, 25%, 40%, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.inscription>.inscription-fiche {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  width: 300px;
+  border: 1px solid whitesmoke;
+  background-color: whitesmoke;
+  border-radius: 30px;
+  text-align: center;
+  transform: translateY(-200%);
+  -moz-animation: test 2s forwards;
+  animation: test 2s forwards;
+  padding-block-start: 12px;
+}
+
+.inscription>.inscription-fiche>form>input[type="text"],
+.inscription>.inscription-fiche>form>input[type="button"] {
+  margin: 20px;
+  max-width: 250px;
+  border: 1px solid hsla(43, 100%, 50%, .7);
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.inscription>.inscription-fiche>form>input[type="text"]:placeholder-shown {
+  padding-inline-start: 10px;
+}
+
+.inscription>.inscription-fiche>form>input[type="button"],
+.inscription>.inscription-fiche>form>input[type="submit"]{
+  background-color: hsla(43, 100%, 50%, .7);
+  font-weight: 500;
+  padding-inline: 40px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.inscription>.inscription-fiche>form>input[type="button"]:hover,
+.inscription>.inscription-fiche>form>input[type="submit"]:hover{
+  background-color: hsla(43, 100%, 50%, 1);
+  transform: scale(1.1);
+  transition: all 0.5s ease-out;
+}
+
+.inscription>.inscription-fiche>form>input[type="text"] {
+  border-color: hsla(43, 100%, 50%, 1);
+}
+
+.inscription>.inscription-fiche>form>input[type="text"]:placeholder-shown {
+  color: black;
+}
+.alert {
+  position: absolute;
+  margin-top: 5.65rem;
+  width: 100%;
+  height: calc(100% - 5rem);
+  background-color: hsla(223, 25%, 40%, .8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  z-index: 1000;
+  
+}
+
+
+.alert>.box p {
+  font-size: 2.6rem;
+  text-transform: uppercase;
+  pointer-events:none;
+}
+/*-----------------------------------------
+-----------------Animation-----------------
+/*-----------------------------------------*/
+
+
+@-moz-keyframes test {
+  0% {
+    transform: translateY(-200%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}

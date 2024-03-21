@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400;1,500&display=swap');
+
+
+/* :root {
+    Color Logo 
+  --primry-color: hsl(194, 86%, 17%);
+  --secondry-color: hsl(191, 18%, 83%);
+} */
+
+*,
+*::after *::before,
+*:focus {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: url('../img/background.png') no-repeat;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+.inscription {
+  max-width: 500px;
+  height: 100%;
+  transform: translate(45%, 15%);
+}
+
+.inscription .header {
+  text-align: center;
+  margin-right: 130px;
+}
+
+.inscription .header h1 {
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.inscription .header h3 {
+  font-size: 1rem;
+  word-spacing: .2rem;
+  color: hsl(0, 0%, 67%);
+  font-weight: 700;
+}
+
+.inscription .header button {
+  width: 171px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 1.5rem;
+  border: 1px solid hsl(353, 76%, 59%);
+  transform: translateX(0%);
+  margin: 10px 0;
+  border-radius: 20px;
+  background: hsl(353, 76%, 59%);
+  color: white;
+  cursor: pointer;
+}
+
+.body {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 50px 0 -100px;
+
+}
+
+form {
+  width: 100%;
+  text-align: center;
+}
+
+form>.ligne {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: center;
+  text-align: center;
+  margin: 40px 10px;
+}
+
+form>.ligne>input[type="text"],
+form>.ligne>input[type="password"],
+form>.ligne>input[type="email"],
+form>.ligne>select {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid gray;
+  flex: 0 1 auto;
+  margin-inline: 10px;
+  transition: 0.5s ease-in-out;
+  background-color: transparent;
+  font-weight: 700;
+}
+
+/* form>.ligne>select>option[selected] {
+  color: red; 
+}*/
+
+
+form>.ligne>input[type="text"]:hover,
+form>.ligne>input[type="password"]:hover,
+form>.ligne>input[type="email"]:hover {
+  color: red;
+  border-color: red;
+  transform: scale(1.1);
+}
+
+form>.ligne>input[type="text"]:focus,
+form>.ligne>input[type="password"]:focus,
+form>.ligne>input[type="email"]:focus {
+  color: red;
+  border-color: red;
+  transform: scale(1.1);
+}
+
+form>.ligne:last-child {
+  display: block;
+}
+
+form>.ligne:nth-child(4) {
+  justify-content: left;
+}
+
+form>.ligne:nth-child(4)>*:first-child {
+  margin-inline: 10px;
+}
+
+form>.ligne:nth-child(4)>*:last-child {
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+form>.ligne:nth-child(4)>*:last-child>small {
+  color: hsl(237, 73%, 57%);
+  text-decoration: underline;
+  line-height: .5;
+  cursor: pointer;
+}
+
+form>.ligne:last-child>input[type="submit"] {
+  padding: 5px 40px;
+  border: none;
+  border-radius: 20px;
+  background-color: hsl(237, 73%, 57%);
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: .2rem;
+  line-height: 1.5;
+}

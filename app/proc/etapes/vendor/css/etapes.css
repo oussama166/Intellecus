@@ -1,0 +1,503 @@
+/* @import url("../../../../../vendor/lib/bootsrapCSS/bootsrap.css"); */
+
+/*initial style*/
+
+:root {
+    --bg-primary: hsl(254, 46%, 34%);
+    --bg-primary-hsl: 254, 46%, 34%;
+    --bg-dark: hsla(255, 11%, 27%, 1);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul li {
+    list-style: none;
+}
+
+.Ou {
+    position: relative;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.Ou::after {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 2px;
+    background-color: black;
+    top: 58%;
+    left: 35px;
+}
+
+.Ou::before {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 2px;
+    background-color: black;
+    top: 58%;
+    left: -247px;
+}
+
+
+/* Section test  */
+
+
+/* Global Style*/
+
+.dspF {
+    display: flex;
+}
+
+.dspG {
+    display: grid;
+}
+
+.txt-ctr {
+    text-align: center;
+}
+
+.txt-lft {
+    text-align: left;
+}
+
+.txt-rgt {
+    text-align: right;
+}
+
+.mr-4 {
+    margin-right: .4rem;
+}
+
+.mr-3 {
+    margin-right: .6rem;
+}
+
+.mr-2 {
+    margin-right: .8rem;
+}
+
+.mr-1 {
+    margin-right: 5rem;
+}
+
+.ml-4 {
+    margin-left: .4rem;
+}
+
+.ml-3 {
+    margin-left: .6rem;
+}
+
+.ml-2 {
+    margin-left: .8rem;
+}
+
+.ml-1 {
+    margin-left: 1rem;
+}
+
+.pd-4 {
+    padding: .4rem;
+}
+
+.pd-3 {
+    padding: .6rem;
+}
+
+.pd-2 {
+    padding: .8rem;
+}
+
+.pd-1 {
+    padding: 1rem;
+}
+
+.pl-4 {
+    padding-left: .4rem;
+}
+
+.pl-3 {
+    padding-left: .6rem;
+}
+
+.pl-2 {
+    padding-left: .8rem;
+}
+
+.pl-1 {
+    padding-left: 1rem;
+}
+
+
+/* parents elements */
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 30% calc(100% - 30%);
+}
+
+.left-side {
+    background-color: var(--bg-primary);
+}
+
+.right-side {
+    display: grid;
+    grid-template-rows: .5fr 1fr .5fr;
+    height: 100vh;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-side-active {
+    opacity: 1;
+}
+
+
+/* Element */
+
+h1 {
+    text-transform: uppercase;
+    color: #ffc;
+    letter-spacing: .2rem;
+}
+
+input[type="text"],
+input[type="date"] {
+    min-width: 100px;
+    height: 40px;
+    border: 1px solid hsla(231, 8%, 64%, .3);
+    border-radius: .5rem;
+    padding-block: 10px;
+    padding-inline-start: 10px;
+    transition: all 0.5s;
+}
+
+input:placeholder-shown {
+    color: hsla(231, 8%, 64%, 1);
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+input:focus {
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus {
+    outline: none;
+    color: black;
+    border: 2px solid hsl(254, 46%, 34%);
+    font-weight: bold;
+    box-shadow: -5px 5px 5px hsla(0, 0%, 0%, .3);
+    transform: scale(1);
+    transition: all 0.5s;
+}
+
+.file {
+    font-size: 16px;
+    height: 3.125rem;
+    background: whithe;
+    border-radius: 50px;
+    /* box-shadow: 4px 12px 10px rgba(77, 76, 76, 0.74); */
+    width: 350px;
+    outline: none;
+    cursor: pointer;
+}
+
+.file::file-selector-button {
+    color: white;
+    height: 3.125rem;
+    background-color: var(--bg-primary);
+    padding: 15px;
+    padding-inline: 15px;
+    border: none;
+    border-radius: 50px;
+    /* box-shadow: -5px 2px 10px rgba(77, 76, 76, 0.74); */
+    font-family: "Open Sans", sans-serif;
+    outline: none;
+}
+
+
+
+
+/* btn */
+
+.btn {
+    width: 170px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.1em;
+    float: right;
+    margin: 20px;
+    color: white;
+    border: none;
+    background-color: var(--bg-primary);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.footer-right>.btn-quitter {
+    background-color: red;
+}
+
+.footer-right>.btn-suivant>.arrow {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.footer-right>.btn-suivant>.arrow::after {
+    content: '\2192';
+    position: absolute;
+    opacity: 0;
+    top: -7px;
+    right: -30%;
+    transition: 0.5s;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: 'Tahoma', Geneva, Verdana, sans-serif;
+}
+
+.footer-right>.btn-suivant:hover .arrow {
+    padding-right: 25px;
+}
+
+.footer-right>.btn-suivant:hover .arrow::after {
+    opacity: 1;
+    right: -31px;
+}
+
+.footer-right>.btn:hover {
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, .5);
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+
+/* Progress bar */
+
+li {
+    position: absolute;
+}
+
+li>.title {
+    position: absolute;
+    top: 7px;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    left: 60%;
+}
+
+span::after {
+    content: attr(data-title);
+    color: whitesmoke;
+    font-weight: 200;
+    font-size: 1rem;
+    display: flex;
+    margin-inline-start: 25px;
+    text-transform: capitalize;
+}
+
+.multi-steps>li.is-active:before,
+.multi-steps>li.is-active~li:before {
+    content: counter(stepNum);
+    font-family: inherit;
+    font-weight: 700;
+}
+
+.multi-steps>li.is-active:after,
+.multi-steps>li.is-active~li:after {
+    background-color: gray;
+}
+
+.multi-steps {
+    display: table;
+    table-layout: fixed;
+    width: 540px;
+    height: calc(100vh - 80px);
+    transform: translateX(-40%);
+}
+
+.card {
+    max-height: 100vh;
+    display: none;
+    transition: all 5s;
+}
+
+.card-active {
+    display: block;
+    transition: all 5s;
+}
+
+.multi-steps>li {
+    counter-increment: stepNum;
+    text-align: center;
+    display: table-row;
+    position: relative;
+}
+
+.multi-steps>li:before {
+    content: '\2713';
+    display: block;
+    margin: 0 auto 4px;
+    border: 1px solid white;
+    background-color: var(--bg-primary);
+    width: 36px;
+    height: 36px;
+    line-height: 32px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    border-radius: 50%;
+    transition: all 1.5s;
+}
+
+.multi-steps>li:after {
+    content: '';
+    height: 100%;
+    width: 4px;
+    background-color: white;
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    z-index: -1;
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1) 1s;
+}
+
+.multi-steps>li:last-child:after {
+    display: none;
+}
+
+.multi-steps>li.is-active:before {
+    background-color: var(--bg-primary);
+    color: white;
+    border-color: white;
+    box-shadow: -1px 4px 19px 4px hsla(231, 8%, 64%, .5);
+}
+
+.multi-steps>li.is-active~li {
+    color: #808080;
+}
+
+.multi-steps>li.is-active~li:before {
+    background-color: #ededed;
+    color: hsl(254, 46%, 34%);
+}
+
+
+/* right side */
+
+.uper-right {
+    float: right;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: flex-start;
+    padding-top: 30px;
+    gap: 10px;
+}
+
+.uper-right>img {
+    height: auto;
+    width: auto;
+    border-radius: 0 10px 0 10px;
+}
+
+.uper-right>h2 {
+    color: black;
+    text-transform: uppercase;
+}
+
+
+/* body right */
+
+.body-right {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 25px;
+    gap: 20px;
+}
+
+.body-right>.input-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.body-right>input-section ul li {
+    display: flex;
+    flex-direction: row;
+}
+
+.body-right>.input-section sub {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: red;
+}
+
+.body-right>.input-section sub+small {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.body-right>.input-section p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    word-spacing: .2rem;
+    padding-inline-start: 20px;
+    padding-block-end: 50px;
+}
+
+.body-right>label {
+    height: 250px;
+    width: 250px;
+}
+
+.input-section>input[type="text"] {
+    width: 300px;
+}
+
+
+/* Animation */
+
+@keyframes animate {
+    from {
+        transform: scale(1, 0);
+    }
+    to {
+        transform: scale(1, 1);
+    }
+}
